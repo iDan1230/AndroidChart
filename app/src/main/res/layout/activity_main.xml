@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tederen.sscustomview.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <com.tederen.sscustomview.AnnulusView
+                android:visibility="gone"
+                android:id="@+id/annulus"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                app:radius="150px"
+                />
+
+
+                <com.tederen.sscustomview.AnnulusChart
+                    android:id="@+id/chart_id"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    app:annulus_radius="50dp"
+                    app:annulus_width="20dp"
+                    />
+            </LinearLayout>
+
+            <com.tederen.sscustomview.ColorSelectionBar
+                android:id="@+id/custom_test"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cursorHeight="30dp"
+                app:cursorWidth="30dp"
+                app:progressHeight="15dp" />
+
+            <com.tederen.sscustomview.BrokenLineBar
+                android:id="@+id/broken_line"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
+                app:brokenColor="@color/colorPrimary"
+                app:coordinateColor="#000000" />
+
+            <com.tederen.sscustomview.ColumnarBar
+                android:id="@+id/columnar_bar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
